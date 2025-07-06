@@ -1,0 +1,47 @@
+[[mouse.bindings]]
+action = "Quit"
+mouse = "Middle"
+
+[font]
+size = 14
+
+[font.normal]
+family = "Ubuntu Mono Nerd Font"
+
+[font.offset]
+y = 4
+
+[mouse]
+hide_when_typing = true
+
+[scrolling]
+history = 100000
+multiplier = 4
+
+[window.padding]
+x = 12
+y = 12
+
+[colors.bright]
+black = "0x606060"
+blue = "0x7491a1"
+cyan = "0x3b90b1"
+green = "0xa7b79a"
+magenta = "0x895094"
+red = "0xe65e60"
+white = "0xfff0f0"
+yellow = "0xfae3a0"
+
+[colors.normal]
+black = "0x202020"
+blue = "0x528ba3"
+cyan = "0x4c88b9"
+green = "0x81957c"
+magenta = "0x895899"
+red = "0xd44949"
+white = "0x909090"
+yellow = "0xf9bb80"
+
+[colors.primary]
+background = "0x151515"
+foreground = "0xffffff"
