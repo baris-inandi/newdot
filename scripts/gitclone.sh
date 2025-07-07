@@ -9,9 +9,9 @@ arg="$1"
 # Print usage if no argument or option-like argument
 if [[ -z "$arg" || "$arg" == -* ]]; then
     echo "Usage:"
-    echo "  gitclone <url>"
-    echo "  gitclone <repo>"
-    echo "  gitclone <user/repo>"
+    echo "  clone <url>"
+    echo "  clone <repo>"
+    echo "  clone <user/repo>"
     exit 0
 fi
 
