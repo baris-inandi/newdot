@@ -108,9 +108,11 @@ function brew-update {
     echo "Full system update complete."
 }
 
-# bun completions
-[ -s "/Users/bi/.bun/_bun" ] && source "/Users/bi/.bun/_bun"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# bun
+[ -s "/Users/bi/.bun/_bun" ] && source "/Users/bi/.bun/_bun" # for completions
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
