@@ -13,8 +13,10 @@ export BUN_INSTALL="$HOME/.bun"
 export EDITOR="micro"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 path+="/opt/homebrew/bin"
+path+="/opt/homebrew/sbin"
 path+="$HOME/.cargo/bin"
 path+="$HOME/.local/bin"
 path+="$BUN_INSTALL/bin"
@@ -32,6 +34,7 @@ alias mm="$EDITOR (sk --preview='bat {} --color=alwaysj')"
 alias clean_node_modules="find ~/me -name node_modules -type d -prune -exec trash {} +"
 alias python="python3.13"
 alias python3="python3.13"
+alias pip="pip3"
 alias ..="cd .."
 
 ################################################################## CLEARCACHE
@@ -64,6 +67,10 @@ function rmthis {
 # Cds into directory and calls ls immediately
 ##################################################################
 function d {
+    if [ -z "$1" ]; then
+        cd
+        return 0
+    fi
     if [ ! -d "$1" ]; then
         echo "\033[31mERROR:\033[0m Directory non-existent"
         return 1
@@ -85,6 +92,17 @@ function mvthis {
     cd ..
     mv "$thisdir" "$1"
     cd "$1"
+}
+
+################################################################## brew-update
+# Updates entire macos setup
+##################################################################
+function brew-update {
+    brew update
+    brew upgrade
+    brew upgrade --cask
+    brew cleanup --prune=all -v
+    brew doctor
 }
 
 # bun completions
