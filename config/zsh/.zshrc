@@ -15,12 +15,12 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-path+="/opt/homebrew/bin"
-path+="/opt/homebrew/sbin"
-path+="$HOME/.cargo/bin"
-path+="$HOME/.local/bin"
-path+="$BUN_INSTALL/bin"
-path+="$HOME/.flutter-sdk/bin"
+PATH+="$HOME/.cargo/bin"
+PATH+="$HOME/.local/bin"
+PATH+="$BUN_INSTALL/bin"
+PATH+="$HOME/.flutter-sdk/bin"
+
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
 # aliases
 alias xt="exit"
@@ -98,11 +98,14 @@ function mvthis {
 # Updates entire macos setup
 ##################################################################
 function brew-update {
+    echo "Full system update starting..."
+    sleep 1
     brew update
     brew upgrade
     brew upgrade --cask
     brew cleanup --prune=all -v
     brew doctor
+    echo "Full system update complete."
 }
 
 # bun completions
