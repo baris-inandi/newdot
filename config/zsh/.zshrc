@@ -98,14 +98,14 @@ function mvthis {
 # Updates entire macos setup
 ##################################################################
 function brew-update {
-    echo "Full system update starting..."
+    echo "Starting full system update..."
     sleep 1
     brew update
     brew upgrade
-    brew upgrade --cask
+    brew upgrade --cask --greedy
     brew cleanup --prune=all -v
     brew doctor
-    echo "Full system update complete."
+    echo "Everything is up to date."
 }
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
