@@ -98,8 +98,7 @@ function mvthis {
 # Updates entire macos setup
 ##################################################################
 function brew-update {
-    echo "Starting full system update..."
-    sleep 1
+    sudo echo "Starting full system update..."
     brew update
     brew upgrade
     brew upgrade --cask --greedy
