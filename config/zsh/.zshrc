@@ -100,8 +100,8 @@ function mvthis {
 function brew-update {
     sudo echo "Starting full system update..."
     brew update
-    brew upgrade
-    brew upgrade --cask --greedy
+    brew upgrade --cask --greedy --display-times
+    brew upgrade --display-times
     brew cleanup --prune=all -v
     brew doctor
     echo "Everything is up to date."
@@ -115,3 +115,6 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 [ -s "/Users/bi/.bun/_bun" ] && source "/Users/bi/.bun/_bun" # for completions
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Added by Windsurf
+export PATH="/Users/bi/.codeium/windsurf/bin:$PATH"
