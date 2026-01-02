@@ -100,8 +100,8 @@ function mvthis {
 function brew-update {
     sudo echo "Starting full system update..."
     brew update
-    brew upgrade --cask --greedy --display-times
     brew upgrade --display-times
+    brew upgrade --cask --greedy --display-times
     brew cleanup --prune=all -v
     brew doctor
     echo "Everything is up to date."
