@@ -30,11 +30,8 @@ alias giff="git diff"
 alias clone="bash ~/dot/scripts/gitclone.sh $@"
 alias ls="lsd -la $argv --config-file ~/dot/config/lsd/lsd.yml"
 alias root="cd /"
-alias mm="$EDITOR (sk --preview='bat {} --color=alwaysj')"
+alias mm="$EDITOR (sk --preview='bat {} --color=always')"
 alias clean_node_modules="find ~/me -name node_modules -type d -prune -exec trash {} +"
-alias python="python3.13"
-alias python3="python3.13"
-alias pip="pip3"
 alias ..="cd .."
 
 ################################################################## CLEARCACHE
