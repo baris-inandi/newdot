@@ -33,6 +33,7 @@ alias root="cd /"
 alias mm="$EDITOR (sk --preview='bat {} --color=always')"
 alias clean_node_modules="find ~/me -name node_modules -type d -prune -exec trash {} +"
 alias ..="cd .."
+alias cd..="cd .."
 
 ################################################################## CLEARCACHE
 # Clears .cache directory and runs paccache -r
