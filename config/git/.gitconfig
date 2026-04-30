@@ -2,7 +2,7 @@
 name = Baris Inandioglu
 email = 68742481+baris-inandi@users.noreply.github.com
 [credential "https://github.com"]
-helper = !gh auth git-credential
+helper = !gh auth token
 [core]
 ignorecase = false
 pager = delta
@@ -22,4 +22,4 @@ hunk-header-file-style = red
 hunk-header-line-number-style = "#067a00"
 hunk-header-style = file line-number syntax
 [credential]
-	helper = manager-core
+helper = manager-core
