@@ -143,7 +143,7 @@
   "inlay_hints": {
     "show_parameter_hints": true,
     "edit_debounce_ms": 500,
-    "enabled": true,
+    "enabled": false,
     "show_background": true,
   },
   "project_panel": {
