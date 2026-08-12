@@ -16,13 +16,17 @@ git pull
 
 printf "${bold}${blue}BRANCHOUT: Switching to \"$b1\"...\n${normal}${white}"
 git checkout "$b1"
+git pull origin "$b1"
 
 if git show-ref --verify --quiet "refs/heads/$b2"; then
   printf "${bold}${blue}BRANCHOUT: Switching to existing branch \"$b2\"...\n${normal}${white}"
   git checkout "$b2"
+  git pull origin "$b2"
 else
   printf "${bold}${blue}BRANCHOUT: Creating new branch \"$b2\"...\n${normal}${white}"
   git checkout -b "$b2"
+  git pull origin "$b2"
 fi
 
+git status
 printf "\n${bold}${green}BRANCHED OUT from${normal}${white} $b1 ${bold}${green}to${normal}${white} $b2\n"
